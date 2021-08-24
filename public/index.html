@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Shortener</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 238, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main__input {
+        outline: none;
+        width: 60%;
+        height: 30px;
+        padding: 0 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      .main__sub-btn {
+        outline: none;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: orange;
+        transition: background-color 0.7s;
+      }
+      .main__sub-btn:hover {
+        background-color: rgb(255, 98, 0);
+      }
+      .output h2 {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>Enter url</h2>
+      <input
+        type="text"
+        class="main__input"
+        id="url-input"
+        placeholder="https://your_url.com"
+      />
+      <button type="submit" id="sub-btn" class="main__sub-btn">Shorten</button>
+      <div class="output" id="output"></div>
+    </main>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
